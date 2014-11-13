@@ -3,14 +3,12 @@
     <%= form_for(:user, :url => session_path(:user)) do |f| %>
       <div>
           <%= f.email_field :email, :placeholder => "Username or email", :class => 'form-control' %>
-          <%= f.errors_for :email %>
 
           <%= f.password_field :password, :placeholder => "Password", :class => 'form-control left' %>
-          <%= f.errors_for :password %>
           <%= f.submit "Sign in", :class => "btn btn-primary pull-right" %>
       </div>
 
-        <div class="clearfix"></div>
+      <div class="clearfix"></div>
 
         <div class="form-group">
           <div class="pull-left">
@@ -18,7 +16,7 @@
             <%= link_to "Forgot password?", new_user_password_path %>
           </div>
         </div>
-        </div>
+      </div>
     <% end %>
   </div>
 </div>
